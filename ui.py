@@ -271,7 +271,7 @@ async def fetch_and_process_data(search_query):
         return None
 
 
-# Modify the query_vector_store function
+#  query_vector_store function
 def query_vector_store(query_embedding, k=5):
 
     """Query the FAISS index and return top-k unique results"""
