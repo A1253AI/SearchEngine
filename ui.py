@@ -270,8 +270,6 @@ async def fetch_and_process_data(search_query):
         st.error(f"Processing error: {str(e)}")
         return None
 
-# Add to the top with other imports
-from math import ceil
 
 # Modify the query_vector_store function
 def query_vector_store(query_embedding, k=5):
