@@ -30,6 +30,7 @@ headers = {
 total_results_to_fetch = 10
 chunk_size = 1000
 
+# Define output paths 
 output_dir = "search_data"
 os.makedirs(output_dir, exist_ok=True)
 dataframe_out_path = os.path.join(output_dir, "search_data.csv")
@@ -38,7 +39,7 @@ faiss_index_path = os.path.join(output_dir, "faiss_index.index")
 # Ollama configuration
 OLLAMA_BASE_URL = "http://localhost:11434"
 OLLAMA_EMBED_MODEL = "nomic-embed-text"
-OLLAMA_LLM_MODEL = "llama3.2:1b"
+OLLAMA_LLM_MODEL = "llama3.2:1b" # LLM model name
 
 async def fetch(session, url, params=None):
     """Fetch content from a URL with optional parameters."""
