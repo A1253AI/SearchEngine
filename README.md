@@ -14,7 +14,7 @@ async def fetch(session, url, params=None):
       async -  Allows multiple web requests to run concurrently (non-blocking), which speeds up scraping multiple pages.
 
   async def fetch_page()
-     Calls the fetch() function to get one Google search results page (e.g., page 1, 2, 3…).
+     Calls the fetch() function to get one BROWSER search results page (e.g., page 1, 2, 3…).
      Parses the page HTML using BeautifulSoup.
      Extracts:
      .tF2Cxc: wrapper for each result
