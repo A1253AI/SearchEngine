@@ -57,7 +57,7 @@ def get_embeddings_from_ollama(text_chunks) - embedding text chunks using
   "prompt": "we will win."
       }
   Output:
-  You get back an embedding, which is a list of float numbers (e.g, a 768-dimensional vector):
+  We get back an embedding, which is a list of float numbers (e.g, a 768-dimensional vector):
   [
        0.00234, -0.0317, 0.1075, ..., 0.0541
   ]
