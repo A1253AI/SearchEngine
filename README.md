@@ -9,7 +9,7 @@ async def fetch(session, url, params=None):
       Makes an asynchronous HTTP GET request using an aiohttp session.
       Includes:
       params: query parameters for the URL (like q=search+term)
-      headers: to simulate a browser
+      headers: to simulate a browser 
       timeout: sets max wait time for response (30 seconds)
       async -  Allows multiple web requests to run concurrently (non-blocking), which speeds up scraping multiple pages.
 
