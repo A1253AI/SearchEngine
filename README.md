@@ -29,3 +29,71 @@ async def fetch(session, url, params=None):
     Removes unwanted tags (<script>, <style>) that don't contain useful content.
     Extracts visible text, removes extra whitespace.
     Returns a clean, human-readable string of text.
+
+def split_text_into_chunks(text, chunk_size):
+   Split text into chunks of approximately equal size
+   Input: A long block of text and a chunk_size (usually in characters).
+   Output: A list of chunks, each containing complete sentences and approximately chunk_size characters.
+   Logic:
+   Splits the text into sentences using a regular expression that preserves sentence-ending punctuation.
+   Iteratively adds sentences to a chunk until adding the next one would exceed the target chunk size.
+   Starts a new chunk and repeats.
+
+
+def process_text_content(texts, chunk_size)
+    Uses asyncio.get_event_loop() + run_in_executor to:
+    Run split_text_into_chunks() concurrently for each text input.
+    It splits the text at each sentence (by . ).
+    It adds sentences to the current chunk until adding another one would exceed the chunk_size.
+    Then it starts a new chunk.
+
+def get_embeddings_from_ollama(text_chunks) - embedding text chunks using
+   Sends each chunk as a POST request to your local Ollama API for embeddings.
+   Handles errors by adding dummy embeddings ([0.0] * 768) to maintain alignment.
+   Uses httpx.AsyncClient for efficient async HTTP requests.
+   It calls get_embeddings_from_ollama() to get embeddings from the local Ollama model (nomic-embed-text).
+   ex - {
+  "model": "nomic-embed-text",
+  "prompt": "we will win."
+      }
+  Output:
+  You get back an embedding, which is a list of float numbers (e.g, a 768-dimensional vector):
+  [
+       0.00234, -0.0317, 0.1075, ..., 0.0541
+  ]
+   
+def query_embeddings(text)
+
+
+Generates an embedding vector for a user’s query.
+
+How it works:
+
+Wraps the query string in a list and uses get_embeddings_from_ollama.
+Returns the single embedding.
+
+def query_ollama_llm(prompt)
+Purpose:
+Queries Ollama's local LLM llama 3.2 to generate a response based on a prompt.
+
+How it works:
+
+Sends POST request to /api/generate with prompt.
+
+
+def get_embeddings_from_ollama(text_chunks)
+Purpose:
+Gets vector embeddings for each text chunk using Ollama’s local embedding model (nomic-embed-text).
+
+How it works:
+
+For each chunk:
+If non-empty, sends a POST request to Ollama’s /api/embeddings.
+Appends the embedding or a zero-vector if it fails.
+
+
+
+
+
+
+
